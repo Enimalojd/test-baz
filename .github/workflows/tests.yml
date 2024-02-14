@@ -1,0 +1,20 @@
+name: Proj-test
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build-proj
+        uses: actions/setup-python@v4
+      - name: Install requirements
+        run: |
+          pip install poetry
+          make install
+      - name: Run lint
+        run: make lint
