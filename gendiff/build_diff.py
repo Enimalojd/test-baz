@@ -4,13 +4,13 @@ def build_diff(data1, data2):
     for key in keys:
         status = {'key': key}
         if key not in data2:
-            status['operation'] = 'removed'
+            status['operation'] = 'only sisyphus'
             status['value'] = data1[key]
         elif key not in data1:
-            status['operation'] = 'added'
+            status['operation'] = 'only p10'
             status['value'] = data2[key]
         elif data1[key] != data2[key]:
-            status['operation'] = 'changed'
+            status['operation'] = 'different versions'
             status['old'] = data1[key]
             status['new'] = data2[key]
         else:
