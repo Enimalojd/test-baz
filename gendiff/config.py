@@ -1,7 +1,2 @@
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-DATA_PATH1 = os.getenv("DATA_PATH1")
-DATA_PATH2 = os.getenv("DATA_PATH2")
+DATA_PATH1 = "https://rdb.altlinux.org/api/export/branch_binary_packages/sisyphus"
+DATA_PATH2 = "https://rdb.altlinux.org/api/export/branch_binary_packages/p10"
