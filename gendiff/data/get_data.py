@@ -31,3 +31,10 @@ def get_p10_data():
         names = {package["name"]: package["version"] for package in data['packages']}
         json.dump(names, file)
     return None
+
+
+def save_data(data):
+    res_path = main_dir() + '/json/result.json'
+    with open(res_path, 'w') as file:
+        file.write(data)
+    return None
