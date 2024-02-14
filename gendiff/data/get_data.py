@@ -18,8 +18,8 @@ def get_sisyphus_data():
     data = requests.get(DATA_PATH1).json()
     dir = main_dir()
     res_path = os.path.join(dir, 'json/sisyphus.json')
+    clear_file(res_path)
     with open(res_path, 'w') as file:
-        clear_file(res_path)
         names = {package["name"]: package["version"]
                  for package in data['packages']}
         json.dump(names, file)
@@ -30,8 +30,8 @@ def get_p10_data():
     data = requests.get(DATA_PATH2).json()
     dir = main_dir()
     res_path = os.path.join(dir, 'json/p10.json')
+    clear_file(res_path)
     with open(res_path, 'w') as file:
-        clear_file(res_path)
         names = {package["name"]: package["version"]
                  for package in data['packages']}
         json.dump(names, file)
