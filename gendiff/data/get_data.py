@@ -44,5 +44,5 @@ def save_data(data):
     clear_file(res_path)
     with open(res_path, 'w') as file:
         file.write(data)
-    print(res_path)
+    print(f'Result here: {res_path}')
     return None
