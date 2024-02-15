@@ -8,7 +8,6 @@ def main():
     res = generate_diff(args.format)
     print(res)
     save_data(res)
-    print("Data saved successfully.")
 
 
 if __name__ == "__main__":
