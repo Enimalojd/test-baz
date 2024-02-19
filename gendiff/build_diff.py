@@ -1,5 +1,6 @@
 from version_utils.rpm import compare_versions
 
+
 def build_diff(data1, data2):
     diff = {}
     sisyphus_packages = []
