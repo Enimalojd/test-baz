@@ -1,5 +1,4 @@
-from gendiff.compare import compare_versions
-
+from version_utils.rpm import compare_versions
 
 def build_diff(data1, data2):
     diff = {}
@@ -17,7 +16,7 @@ def build_diff(data1, data2):
             status['branch'] = 'different versions'
             status['sisyphus'] = data1[key]
             status['p10'] = data2[key]
-            if compare_versions(data1[key], data2[key]):
+            if compare_versions(data1[key], data2[key]) == 1:
                 sisyphus_packages.append(key)
         else:
             status['branch'] = 'coincidence'
